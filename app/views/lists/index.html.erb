@@ -1,0 +1,6 @@
+<div class="container">
+  <%= link_to 'Make a new list', new_list_path %>
+  <% @lists.order(name: "ASC").each do |list| %>
+    <h2><%= link_to list.name, list_path(list) %></h2>
+  <% end %>
+</div>
